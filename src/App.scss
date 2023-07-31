@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layout CSS */
+
+.hvc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Component CSS */
+
+.app {
+  min-height: 100dvh;
+}
+
+.summary-ctn {
+  background-color: white;
+  width: 720px;
+  height: 480px;
+  border: 2px solid black;
+  border-radius: 8px;
+}

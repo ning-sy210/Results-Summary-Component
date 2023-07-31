@@ -1,7 +1,11 @@
-import "./App.css";
+import "./App.scss";
 
 function App() {
-  return <div>App</div>;
+  return (
+    <div className="app hvc">
+      <div className="summary-ctn"></div>
+    </div>
+  );
 }
 
 export default App;
