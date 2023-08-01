@@ -6,11 +6,20 @@
 
 /* Layout CSS */
 
-.hvc {
+.stack,
+.stack-hc,
+.stack-hvc {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.stack-hc,
+.stack-hvc {
   align-items: center;
+}
+
+.stack-hvc {
+  justify-content: center;
 }
 
 /* Component CSS */
@@ -36,6 +45,19 @@
 
   background: linear-gradient($gradient-top-color, $gradient-bot-color);
   border-radius: inherit;
+  padding: 32px 0px;
+  row-gap: 32px;
+}
+
+.score-display {
+  $length: 152px;
+  $gradient-top-color: hsla(256, 72%, 46%, 1);
+  $gradient-bot-color: hsla(241, 72%, 46%, 0);
+
+  width: $length;
+  height: $length;
+  border-radius: 50%;
+  background: linear-gradient($gradient-top-color, $gradient-bot-color);
 }
 
 .result-summary {
