@@ -12,10 +12,11 @@ function App() {
             <span className="max-score">of 100</span>
           </div>
 
-          <div>
-            <span>Great</span>
+          <div className="text-content stack-hc">
+            <span className="text__white">Great</span>
             <p>
-              You scored higher than 65% of the people who have taken the tests.
+              You scored higher than 65% of the people who have taken these
+              tests.
             </p>
           </div>
         </div>
