@@ -68,7 +68,7 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
   border-radius: inherit;
   padding: 32px 40px 40px;
   text-align: center;
-  row-gap: 32px;
+  justify-content: space-between;
 
   .your-result {
     color: hsla(0, 0%, 100%, 0.6);
@@ -78,7 +78,7 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
 }
 
 .score-display {
-  $length: 176px;
+  $length: 160px;
   $gradient-top-color: hsla(256, 72%, 46%, 1);
   $gradient-bot-color: hsla(241, 72%, 46%, 0);
 
