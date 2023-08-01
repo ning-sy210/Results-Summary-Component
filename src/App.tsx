@@ -1,6 +1,28 @@
 import "./App.scss";
+import cards from "./assets/data.js";
+
+type T_ScoreCard = {
+  category: string;
+  score: number;
+  icon: string;
+};
 
 function App() {
+  function makeScoreCard(card: T_ScoreCard) {
+    const key = `${card.category.toLowerCase()}-score-card`;
+
+    return (
+      <div key={key} className={`d-flex score-card ${key}`}>
+        <img src={card.icon} />
+        <span>{card.category}</span>
+        <div>
+          <span>{card.score}</span>
+          <span> / 100</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="app stack-hvc">
       <div className="summary-ctn">
@@ -20,7 +42,12 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="result-summary"></div>
+
+        <div className="result-summary">
+          <span>Summary</span>
+          <div>{cards.map((card) => makeScoreCard(card))}</div>
+          <button>Continue</button>
+        </div>
       </div>
     </div>
   );
