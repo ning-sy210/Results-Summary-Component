@@ -149,6 +149,7 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
 .score-card {
   padding: 12px 12px;
   border-radius: 8px;
+  position: relative;
 
   &--label {
     column-gap: 8px;
@@ -188,6 +189,61 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
     .cat-max-score {
       color: hsl(0deg 0% 0% / 40%);
     }
+  }
+
+  .corner {
+    position: absolute;
+    border-style: solid;
+    border-radius: 8px;
+
+    &-reaction {
+      border-color: hsla(0, 100%, 67%, 0.5);
+    }
+
+    &-memory {
+      border-color: hsla(39, 100%, 56%, 0.5);
+    }
+
+    &-verbal {
+      border-color: hsla(166, 100%, 37%, 0.5);
+    }
+
+    &-visual {
+      border-color: hsla(234, 85%, 45%, 0.5);
+    }
+  }
+
+  $border-width: 20px;
+  $border-offset: 1px;
+
+  .top,
+  .bot {
+    // width: $border-width;
+  }
+
+  .left,
+  .right {
+    // height: $border-width;
+  }
+
+  .top {
+    top: -$border-offset;
+    border-top-width: $border-offset;
+  }
+
+  .bot {
+    bottom: -$border-offset;
+    border-bottom-width: $border-offset;
+  }
+
+  .left {
+    left: -$border-offset;
+    border-left-width: $border-offset;
+  }
+
+  .right {
+    right: -$border-offset;
+    border-right-width: $border-offset;
   }
 }
 
