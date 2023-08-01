@@ -18,9 +18,9 @@ function App() {
           <span>{card.category}</span>
         </div>
 
-        <div>
-          <span className="user-score">{card.score}</span>
-          <span className="max-score">&nbsp;&nbsp;/ 100</span>
+        <div className="cat-score-ctn">
+          <span className="cat-score">{card.score}</span>
+          <span className="cat-max-score">&nbsp;&nbsp;/ 100</span>
         </div>
       </div>
     );

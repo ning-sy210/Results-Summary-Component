@@ -119,7 +119,7 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
 
   .summary-label {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 800;
     color: hsl(0deg 0% 0% / 75%);
   }
 
@@ -152,6 +152,10 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
 
   &--label {
     column-gap: 8px;
+
+    span {
+      font-weight: 700;
+    }
   }
 
   &-reaction {
@@ -172,6 +176,18 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
   &-visual {
     background-color: hsla(234, 85%, 45%, 0.05);
     color: hsl(234, 85%, 45%);
+  }
+
+  .cat-score-ctn {
+    font-weight: 800;
+
+    .cat-score {
+      color: black;
+    }
+
+    .cat-max-score {
+      color: hsl(0deg 0% 0% / 40%);
+    }
   }
 }
 
