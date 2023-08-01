@@ -9,7 +9,7 @@ type T_ScoreCard = {
 
 function App() {
   function makeScoreCard(card: T_ScoreCard) {
-    const key = `${card.category.toLowerCase()}-score-card`;
+    const key = `score-card-${card.category.toLowerCase()}`;
 
     return (
       <div key={key} className={`vcsb score-card ${key}`}>
@@ -19,8 +19,8 @@ function App() {
         </div>
 
         <div>
-          <span>{card.score}</span>
-          <span>&nbsp;&nbsp;/ 100</span>
+          <span className="user-score">{card.score}</span>
+          <span className="max-score">&nbsp;&nbsp;/ 100</span>
         </div>
       </div>
     );

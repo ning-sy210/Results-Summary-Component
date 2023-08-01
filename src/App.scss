@@ -149,10 +149,29 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
 .score-card {
   padding: 12px 12px;
   border-radius: 8px;
-  background-color: antiquewhite;
 
   &--label {
     column-gap: 8px;
+  }
+
+  &-reaction {
+    background-color: hsla(0, 100%, 67%, 0.05);
+    color: hsl(0, 100%, 67%);
+  }
+
+  &-memory {
+    background-color: hsla(39, 100%, 56%, 0.05);
+    color: hsl(39, 100%, 56%);
+  }
+
+  &-verbal {
+    background-color: hsla(166, 100%, 37%, 0.05);
+    color: hsl(166, 100%, 37%);
+  }
+
+  &-visual {
+    background-color: hsla(234, 85%, 45%, 0.05);
+    color: hsl(234, 85%, 45%);
   }
 }
 
