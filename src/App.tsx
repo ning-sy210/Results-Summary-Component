@@ -7,6 +7,12 @@ type T_ScoreCard = {
   icon: string;
 };
 
+function calcAverageScoreOfCards(cards: T_ScoreCard[]): number {
+  return Math.floor(
+    cards.reduce((acc, curr) => acc + curr.score, 0) / cards.length,
+  );
+}
+
 function App() {
   function makeScoreCard(card: T_ScoreCard) {
     const key = `score-card-${card.category.toLowerCase()}`;
@@ -33,7 +39,9 @@ function App() {
           <span className="your-result">Your Result</span>
 
           <div className="score-display stack-hvc">
-            <span className="score text__white">76</span>
+            <span className="score text__white">
+              {calcAverageScoreOfCards(cards)}
+            </span>
             <span className="max-score">of 100</span>
           </div>
 
