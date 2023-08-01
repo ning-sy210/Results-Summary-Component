@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.scss";
+import cards from "./assets/data.js";
+
+type T_ScoreCard = {
+  category: string;
+  score: number;
+  icon: string;
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  function makeScoreCard(card: T_ScoreCard) {
+    const key = `score-card-${card.category.toLowerCase()}`;
+
+    return (
+      <div key={key} className={`vcsb score-card ${key}`}>
+        <div className="vc score-card--label">
+          <img src={card.icon} title={`${card.category} Icon`} />
+          <span>{card.category}</span>
+        </div>
+
+        <div className="cat-score-ctn">
+          <span className="cat-score">{card.score}</span>
+          <span className="cat-max-score">&nbsp;&nbsp;/ 100</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app stack-hvc">
+      <div className="summary-ctn">
+        <div className="result-display stack-hc">
+          <span className="your-result">Your Result</span>
+
+          <div className="score-display stack-hvc">
+            <span className="score text__white">76</span>
+            <span className="max-score">of 100</span>
+          </div>
+
+          <div className="text-content stack-hc">
+            <span className="text__white">Great</span>
+            <p>
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </div>
+
+        <div className="result-summary stack">
+          <span className="summary-label">Summary</span>
+          <div className="score-summary-ctn stack">
+            {cards.map((card) => makeScoreCard(card))}
+          </div>
+          <button type="button">Continue</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
