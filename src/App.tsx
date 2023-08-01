@@ -12,12 +12,15 @@ function App() {
     const key = `${card.category.toLowerCase()}-score-card`;
 
     return (
-      <div key={key} className={`d-flex score-card ${key}`}>
-        <img src={card.icon} />
-        <span>{card.category}</span>
+      <div key={key} className={`vcsb score-card ${key}`}>
+        <div className="vc score-card--label">
+          <img src={card.icon} title={`${card.category} Icon`} />
+          <span>{card.category}</span>
+        </div>
+
         <div>
           <span>{card.score}</span>
-          <span> / 100</span>
+          <span>&nbsp;&nbsp;/ 100</span>
         </div>
       </div>
     );
@@ -43,10 +46,12 @@ function App() {
           </div>
         </div>
 
-        <div className="result-summary">
-          <span>Summary</span>
-          <div>{cards.map((card) => makeScoreCard(card))}</div>
-          <button>Continue</button>
+        <div className="result-summary stack">
+          <span className="summary-label">Summary</span>
+          <div className="score-summary-ctn stack">
+            {cards.map((card) => makeScoreCard(card))}
+          </div>
+          <button type="button">Continue</button>
         </div>
       </div>
     </div>
