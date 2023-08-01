@@ -5,11 +5,11 @@ function App() {
     <div className="app stack-hvc">
       <div className="summary-ctn">
         <div className="result-display stack-hc">
-          <span>Your Result</span>
+          <span className="your-result">Your Result</span>
 
           <div className="score-display stack-hvc">
-            <span>76</span>
-            <span>of 100</span>
+            <span className="score text__white">76</span>
+            <span className="max-score">of 100</span>
           </div>
 
           <div>

@@ -55,6 +55,11 @@
   border-radius: inherit;
   padding: 32px 0px;
   row-gap: 32px;
+
+  .your-result {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-weight: 500;
+  }
 }
 
 .score-display {
@@ -66,8 +71,21 @@
   height: $length;
   border-radius: 50%;
   background: linear-gradient($gradient-top-color, $gradient-bot-color);
+
+  .score {
+    font-size: 48px;
+    font-weight: 800;
+  }
+
+  .max-score {
+    color: hsla(0, 0%, 100%, 0.4);
+  }
 }
 
 .result-summary {
   background-color: transparent;
+}
+
+.text__white {
+  color: hsl(0, 0%, 100%);
 }
