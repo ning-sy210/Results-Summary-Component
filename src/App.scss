@@ -59,7 +59,8 @@
 
   .your-result {
     color: hsla(0, 0%, 100%, 0.6);
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
@@ -74,7 +75,7 @@
   background: linear-gradient($gradient-top-color, $gradient-bot-color);
 
   .score {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 800;
   }
 
@@ -84,16 +85,17 @@
 }
 
 .text-content {
-  padding: 0px 64px;
   row-gap: 16px;
 
   span {
     font-size: 24px;
     font-weight: 700;
+    letter-spacing: 1px;
   }
 
   p {
     color: hsla(0, 0%, 100%, 0.65);
+    max-width: 224px;
   }
 }
 
