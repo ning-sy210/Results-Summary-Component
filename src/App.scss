@@ -20,9 +20,24 @@
 }
 
 .summary-ctn {
-  background-color: white;
+  background-color: rgb(255, 224, 224);
   width: 720px;
   height: 480px;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 28px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.result-display {
+  $gradient-top-color: hsl(252, 100%, 67%);
+  $gradient-bot-color: hsl(241, 81%, 54%);
+
+  background: linear-gradient($gradient-top-color, $gradient-bot-color);
+  border-radius: inherit;
+}
+
+.result-summary {
+  background-color: transparent;
 }
