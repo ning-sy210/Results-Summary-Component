@@ -19,10 +19,10 @@ const ScoreCard = ({ category, score, icon }: T_ScoreCard) => {
         <span className="cat-max-score">&nbsp;&nbsp;/ 100</span>
       </div>
 
-      <div className={`top left corner corner-${catLowerCase}`}></div>
-      <div className={`top right corner corner-${catLowerCase}`}></div>
-      <div className={`bot left corner corner-${catLowerCase}`}></div>
-      <div className={`bot right corner corner-${catLowerCase}`}></div>
+      <div className={`top left corner corner__top-left`}></div>
+      <div className={`top right corner corner__top-right`}></div>
+      <div className={`bot left corner corner__bot-left`}></div>
+      <div className={`bot right corner corner__bot-right`}></div>
     </div>
   );
 };
