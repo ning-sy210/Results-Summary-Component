@@ -33,17 +33,20 @@ function App() {
         </div>
 
         <div className="result-summary stack">
-          <span className="summary-label">Summary</span>
-          <div className="score-summary-ctn stack">
-            {cards.map((card) => (
-              <ScoreCard
-                key={card.category.toLowerCase()}
-                category={card.category}
-                score={card.score}
-                icon={card.icon}
-              />
-            ))}
+          <div className="all-scores-ctn stack">
+            <span className="summary-label">Summary</span>
+            <div className="score-summary-ctn stack">
+              {cards.map((card) => (
+                <ScoreCard
+                  key={card.category.toLowerCase()}
+                  category={card.category}
+                  score={card.score}
+                  icon={card.icon}
+                />
+              ))}
+            </div>
           </div>
+
           <button type="button">Continue</button>
         </div>
       </div>
