@@ -198,6 +198,7 @@ $bg-gradient: linear-gradient($bg-gradient-color-1, $bg-gradient-color-2);
 
   .cat-score-ctn {
     font-weight: 800;
+    column-gap: 8px;
 
     .cat-score {
       color: black;
