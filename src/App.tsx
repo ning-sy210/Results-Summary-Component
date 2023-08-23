@@ -5,7 +5,7 @@ import ScoreCard, { T_ScoreCard } from "./ScoreCard.js";
 
 function calcAverageScoreOfCards(cards: T_ScoreCard[]): number {
   return Math.floor(
-    cards.reduce((acc, curr) => acc + curr.score, 0) / cards.length,
+    cards.reduce((acc, curr) => acc + curr.score, 0) / cards.length
   );
 }
 
@@ -14,7 +14,7 @@ function App() {
     <div className="app stack-hvc">
       <div className="summary-ctn">
         <div className="result-display stack-hc">
-          <span className="your-result">Your Result</span>
+          <p className="your-result">Your Result</p>
 
           <div className="score-display stack-hvc">
             <span className="score text__white">
