@@ -1,42 +1,20 @@
 import "./App.scss";
 import cards from "./assets/data.js";
 
-type T_ScoreCard = {
-  category: string;
-  score: number;
-  icon: string;
-};
+import ScoreCard, { T_ScoreCard } from "./ScoreCard.js";
 
 function calcAverageScoreOfCards(cards: T_ScoreCard[]): number {
   return Math.floor(
-    cards.reduce((acc, curr) => acc + curr.score, 0) / cards.length,
+    cards.reduce((acc, curr) => acc + curr.score, 0) / cards.length
   );
 }
 
 function App() {
-  function makeScoreCard(card: T_ScoreCard) {
-    const key = `score-card-${card.category.toLowerCase()}`;
-
-    return (
-      <div key={key} className={`vcsb score-card ${key}`}>
-        <div className="vc score-card--label">
-          <img src={card.icon} title={`${card.category} Icon`} />
-          <span>{card.category}</span>
-        </div>
-
-        <div className="cat-score-ctn">
-          <span className="cat-score">{card.score}</span>
-          <span className="cat-max-score">&nbsp;&nbsp;/ 100</span>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="app stack-hvc">
       <div className="summary-ctn">
         <div className="result-display stack-hc">
-          <span className="your-result">Your Result</span>
+          <p className="your-result">Your Result</p>
 
           <div className="score-display stack-hvc">
             <span className="score text__white">
@@ -55,10 +33,20 @@ function App() {
         </div>
 
         <div className="result-summary stack">
-          <span className="summary-label">Summary</span>
-          <div className="score-summary-ctn stack">
-            {cards.map((card) => makeScoreCard(card))}
+          <div className="all-scores-ctn stack">
+            <span className="summary-label">Summary</span>
+            <div className="score-summary-ctn stack">
+              {cards.map((card) => (
+                <ScoreCard
+                  key={card.category.toLowerCase()}
+                  category={card.category}
+                  score={card.score}
+                  icon={card.icon}
+                />
+              ))}
+            </div>
           </div>
+
           <button type="button">Continue</button>
         </div>
       </div>
