@@ -1,0 +1,18 @@
+/* Reset + Defaults */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("../fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
