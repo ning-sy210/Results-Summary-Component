@@ -1,0 +1,29 @@
+.d-flex,
+.vc,
+.vcsb,
+.stack,
+.stack-hc,
+.stack-hvc {
+  display: flex;
+}
+
+.stack,
+.stack-hc,
+.stack-hvc {
+  flex-direction: column;
+}
+
+.stack-hc,
+.stack-hvc,
+.vc,
+.vcsb {
+  align-items: center;
+}
+
+.vcsb {
+  justify-content: space-between;
+}
+
+.stack-hvc {
+  justify-content: center;
+}
