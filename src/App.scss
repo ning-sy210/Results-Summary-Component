@@ -1,58 +1,4 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-p {
-  font-size: 18px;
-}
-
-/* Fonts */
-
-@font-face {
-  font-family: "HankenGrotesk";
-  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
-}
-
-/* Layout CSS */
-
-.d-flex,
-.vc,
-.vcsb,
-.stack,
-.stack-hc,
-.stack-hvc {
-  display: flex;
-}
-
-.stack,
-.stack-hc,
-.stack-hvc {
-  flex-direction: column;
-}
-
-.stack-hc,
-.stack-hvc,
-.vc,
-.vcsb {
-  align-items: center;
-}
-
-.vcsb {
-  justify-content: space-between;
-}
-
-.stack-hvc {
-  justify-content: center;
-}
-
 /* Component CSS */
-
-.app {
-  min-height: 100dvh;
-  font-family: "HankenGrotesk";
-}
 
 .summary-ctn {
   background-color: rgb(255, 255, 255);
@@ -67,56 +13,6 @@ p {
 $bg-gradient-color-1: hsl(252, 100%, 67%);
 $bg-gradient-color-2: hsl(241, 81%, 54%);
 $bg-gradient: linear-gradient($bg-gradient-color-1 -40%, $bg-gradient-color-2);
-
-.result-display {
-  background: $bg-gradient;
-  border-radius: inherit;
-  padding: 32px 40px 40px;
-  text-align: center;
-  justify-content: space-between;
-
-  .your-result {
-    color: hsla(0, 0%, 100%, 0.6);
-    font-weight: 600;
-  }
-}
-
-.score-display {
-  $length: 160px;
-  $gradient-top-color: hsla(256, 72%, 46%, 1);
-  $gradient-bot-color: hsla(241, 72%, 46%, 0);
-
-  width: $length;
-  height: $length;
-  border-radius: 50%;
-  background: linear-gradient($gradient-top-color, $gradient-bot-color);
-
-  .score {
-    font-size: 56px;
-    font-weight: 800;
-  }
-
-  .max-score {
-    color: hsla(0, 0%, 100%, 0.4);
-  }
-}
-
-.text-content {
-  row-gap: 12px;
-
-  span {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-
-  p {
-    color: hsla(0, 0%, 100%, 0.65);
-    max-width: 224px;
-    font-size: 1rem;
-    font-weight: 400;
-  }
-}
 
 .result-summary {
   padding: 32px 32px 40px;
@@ -289,27 +185,6 @@ $bg-gradient: linear-gradient($bg-gradient-color-1 -40%, $bg-gradient-color-2);
     border-radius: 0px;
   }
 
-  .result-display {
-    border-radius: 0px 0px 32px 32px;
-    row-gap: 24px;
-    padding-top: 24px;
-  }
-
-  .score-display {
-    $mobile-length: 140px;
-
-    width: $mobile-length;
-    height: $mobile-length;
-  }
-
-  .text-content {
-    row-gap: 8px;
-
-    p {
-      max-width: none;
-    }
-  }
-
   .result-summary {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -317,22 +192,5 @@ $bg-gradient: linear-gradient($bg-gradient-color-1 -40%, $bg-gradient-color-2);
 
   .score-card {
     padding: 18px 16px;
-  }
-
-  .result-summary {
-    row-gap: 24px;
-
-    .score-summary-ctn {
-      row-gap: 16px;
-    }
-
-    button {
-      $mobile-height: 56px;
-
-      height: $mobile-height;
-      border-radius: calc($mobile-height / 2);
-      font-size: 18px;
-      font-weight: 600;
-    }
   }
 }
