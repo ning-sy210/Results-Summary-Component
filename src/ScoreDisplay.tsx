@@ -1,10 +1,10 @@
-export type T_ScoreCard = {
+export type ScoreDisplayProps = {
   category: string;
   score: number;
   icon: string;
 };
 
-const ScoreCard = ({ category, score, icon }: T_ScoreCard) => {
+const ScoreDisplay = ({ category, score, icon }: ScoreDisplayProps) => {
   const catLowerCase = category.toLowerCase();
 
   return (
@@ -27,4 +27,4 @@ const ScoreCard = ({ category, score, icon }: T_ScoreCard) => {
   );
 };
 
-export default ScoreCard;
+export default ScoreDisplay;

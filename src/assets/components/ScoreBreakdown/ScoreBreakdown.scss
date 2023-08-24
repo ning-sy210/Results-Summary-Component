@@ -1,0 +1,61 @@
+.result-summary {
+  padding: 32px 32px 40px;
+  row-gap: 32px;
+}
+
+.all-scores-ctn {
+  row-gap: 24px;
+}
+
+.summary-label {
+  font-size: 18px;
+  font-weight: 800;
+  color: hsl(0deg 0% 0% / 75%);
+}
+
+.score-summary-ctn {
+  row-gap: 12px;
+}
+
+button {
+  $height: 48px;
+
+  height: $height;
+  border: none;
+  border-radius: calc($height / 2);
+  font-family: inherit;
+  cursor: pointer;
+
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+
+  &:hover {
+    $bg-gradient-color-1: hsl(252, 100%, 67%);
+    $bg-gradient-color-2: hsl(241, 81%, 54%);
+    $bg-gradient: linear-gradient(
+      $bg-gradient-color-1 -40%,
+      $bg-gradient-color-2
+    );
+
+    background: $bg-gradient;
+  }
+}
+
+@media (max-width: 520px) {
+  .result-summary {
+    row-gap: 24px;
+  }
+
+  .score-summary-ctn {
+    row-gap: 16px;
+  }
+
+  button {
+    $mobile-height: 56px;
+
+    height: $mobile-height;
+    border-radius: calc($mobile-height / 2);
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
