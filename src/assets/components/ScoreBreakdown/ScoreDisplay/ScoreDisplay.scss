@@ -80,4 +80,10 @@ $y-axis-pos: "top", "bottom";
   .score-display {
     padding: 18px 16px;
   }
+
+  .corner {
+    $border-length--mobile: 12px;
+    width: $border-length--mobile;
+    height: $border-length--mobile;
+  }
 }
