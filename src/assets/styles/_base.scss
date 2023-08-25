@@ -58,7 +58,7 @@ p {
   background-color: $color--neutral-1;
   border-radius: 32px;
   box-shadow: 10px 16px 20px 0px $color--neutral-2,
-    0px 0px 12px 0px hsl(0 0% 97%);
+    0px 4px 16px 0px rgba($color--neutral-2, 97%);
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
