@@ -13,7 +13,7 @@
   font-weight: 600;
 }
 
-.result-display {
+.result-circle-display {
   $length: 160px;
 
   width: $length;
@@ -52,7 +52,7 @@
 }
 
 @media (max-width: $mqb--max-width-small-tablet) {
-  .result-display {
+  .result-circle-display {
     $mobile-length: 140px;
 
     width: $mobile-length;

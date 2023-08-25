@@ -9,7 +9,7 @@ const OverallResult = ({ result }: OverallResultProps) => {
     <div className="overall-result stack-hc">
       <p className="result-text">Your Result</p>
 
-      <div className="result-display stack-hvc">
+      <div className="result-circle-display stack-hvc">
         <span className="score text--white">{result}</span>
         <span className="max-score">of 100</span>
       </div>
