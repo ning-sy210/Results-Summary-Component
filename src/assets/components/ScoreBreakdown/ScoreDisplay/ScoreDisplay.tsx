@@ -11,7 +11,7 @@ const ScoreDisplay = ({ categoryLabel, score, icon }: ScoreDisplayProps) => {
 
   return (
     <div className={`vcsb score-display score-display-${catLowerCase}`}>
-      <div className="vc score-display--label">
+      <div className="vc score-display__label">
         <img src={icon} title={`${categoryLabel} Icon`} />
         <span>{categoryLabel}</span>
       </div>
@@ -21,10 +21,10 @@ const ScoreDisplay = ({ categoryLabel, score, icon }: ScoreDisplayProps) => {
         <span className="category-max-score">/ 100</span>
       </div>
 
-      <div className={`top left corner corner__top-left`}></div>
-      <div className={`top right corner corner__top-right`}></div>
-      <div className={`bottom left corner corner__bottom-left`}></div>
-      <div className={`bottom right corner corner__bottom-right`}></div>
+      <div className={`top left corner corner--top-left`}></div>
+      <div className={`top right corner corner--top-right`}></div>
+      <div className={`bottom left corner corner--bottom-left`}></div>
+      <div className={`bottom right corner corner--bottom-right`}></div>
     </div>
   );
 };

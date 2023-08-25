@@ -10,12 +10,12 @@ const OverallResult = ({ result }: OverallResultProps) => {
       <p className="result-text">Your Result</p>
 
       <div className="result-display stack-hvc">
-        <span className="score text__white">{result}</span>
+        <span className="score text--white">{result}</span>
         <span className="max-score">of 100</span>
       </div>
 
       <div className="performance-text stack-hc">
-        <span className="text__white">Great</span>
+        <span className="text--white">Great</span>
         <p>
           You scored higher than 65% of the people who have taken these tests.
         </p>

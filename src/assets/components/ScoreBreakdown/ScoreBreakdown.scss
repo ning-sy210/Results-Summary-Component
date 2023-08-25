@@ -4,11 +4,11 @@
   padding: 32px 32px 40px;
   row-gap: 32px;
 
-  &--main {
+  &__main {
     row-gap: 24px;
   }
 
-  &--core {
+  &__core {
     row-gap: 12px;
   }
 }
@@ -40,7 +40,7 @@ button {
   .score-breakdown {
     row-gap: 24px;
 
-    &--core {
+    &__core {
       row-gap: 16px;
     }
   }

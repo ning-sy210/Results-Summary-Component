@@ -8,9 +8,9 @@ type scoreBreakdownProps = {
 const ScoreBreakdown = ({ scores }: scoreBreakdownProps) => {
   return (
     <div className="score-breakdown stack">
-      <div className="score-breakdown--main stack">
+      <div className="score-breakdown__main stack">
         <span className="summary-label">Summary</span>
-        <div className="score-breakdown--core stack">
+        <div className="score-breakdown__core stack">
           {scores.map((score) => (
             <ScoreDisplay
               key={score.categoryLabel.toLowerCase()}

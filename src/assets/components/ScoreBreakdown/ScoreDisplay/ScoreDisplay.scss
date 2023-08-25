@@ -6,7 +6,7 @@
   border-radius: 8px;
   position: relative;
 
-  &--label {
+  &__label {
     column-gap: 10px;
 
     span {
@@ -61,7 +61,7 @@ $y-axis-pos: "top", "bottom";
 
   @each $y in $y-axis-pos {
     @each $x in $x-axis-pos {
-      &__#{$y}-#{$x} {
+      &--#{$y}-#{$x} {
         border-#{$y}-#{$x}-radius: $border-radius;
       }
     }
