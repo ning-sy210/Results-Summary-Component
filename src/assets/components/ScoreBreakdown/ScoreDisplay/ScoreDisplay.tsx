@@ -23,8 +23,8 @@ const ScoreDisplay = ({ categoryLabel, score, icon }: ScoreDisplayProps) => {
 
       <div className={`top left corner corner__top-left`}></div>
       <div className={`top right corner corner__top-right`}></div>
-      <div className={`bot left corner corner__bot-left`}></div>
-      <div className={`bot right corner corner__bot-right`}></div>
+      <div className={`bottom left corner corner__bottom-left`}></div>
+      <div className={`bottom right corner corner__bottom-right`}></div>
     </div>
   );
 };

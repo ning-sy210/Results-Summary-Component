@@ -1,3 +1,6 @@
+@use "../../../styles/base" as *;
+@use "sass:list";
+
 .score-display {
   padding: 12px 12px;
   border-radius: 8px;
@@ -11,39 +14,21 @@
     }
   }
 
-  &-reaction {
-    background-color: hsla(0, 100%, 67%, 0.05);
-    color: hsl(0, 100%, 67%);
+  $variation-colors: (
+    "reaction": $color--reaction-primary,
+    "memory": $color--memory-primary,
+    "verbal": $color--verbal-primary,
+    "visual": $color--visual-primary,
+  );
 
-    .corner {
-      border-color: hsla(0, 100%, 67%, 0.1);
-    }
-  }
+  @each $var, $color in $variation-colors {
+    &-#{$var} {
+      background-color: rgba($color, 0.05);
+      color: rgba($color, 0.8);
 
-  &-memory {
-    background-color: hsla(39, 100%, 56%, 0.05);
-    color: hsl(39, 100%, 56%);
-
-    .corner {
-      border-color: hsla(39, 100%, 56%, 0.1);
-    }
-  }
-
-  &-verbal {
-    background-color: hsla(166, 100%, 37%, 0.05);
-    color: hsl(166, 100%, 37%);
-
-    .corner {
-      border-color: hsla(166, 100%, 37%, 0.1);
-    }
-  }
-
-  &-visual {
-    background-color: hsla(234, 85%, 45%, 0.05);
-    color: hsl(234, 85%, 45%);
-
-    .corner {
-      border-color: hsla(234, 85%, 45%, 0.1);
+      .corner {
+        border-color: rgba($color, 0.1);
+      }
     }
   }
 }
@@ -53,11 +38,11 @@
   column-gap: 8px;
 
   .category-score {
-    color: black;
+    color: rgba($color--black, 0.75);
   }
 
   .category-max-score {
-    color: hsl(0deg 0% 0% / 40%);
+    color: rgba($color--black, 0.4);
   }
 }
 
@@ -66,53 +51,32 @@ $border-width: 2px;
 $border-offset: 1px;
 $border-radius: 8px;
 
+$x-axis-pos: "left", "right";
+$y-axis-pos: "top", "bottom";
+
 .corner {
   position: absolute;
   width: $border-length;
   height: $border-length;
 
-  &__top-left {
-    border-top-left-radius: $border-radius;
-  }
-
-  &__top-right {
-    border-top-right-radius: $border-radius;
-  }
-
-  &__bot-left {
-    border-bottom-left-radius: $border-radius;
-  }
-
-  &__bot-right {
-    border-bottom-right-radius: $border-radius;
+  @each $y in $y-axis-pos {
+    @each $x in $x-axis-pos {
+      &__#{$y}-#{$x} {
+        border-#{$y}-#{$x}-radius: $border-radius;
+      }
+    }
   }
 }
 
-.top {
-  top: -$border-offset;
-  border-top-width: $border-width;
-  border-top-style: solid;
+@each $pos in list.join($x-axis-pos, $y-axis-pos) {
+  .#{$pos} {
+    #{$pos}: -$border-offset;
+    border-#{$pos}-width: $border-width;
+    border-#{$pos}-style: solid;
+  }
 }
 
-.bot {
-  bottom: -$border-offset;
-  border-bottom-width: $border-width;
-  border-bottom-style: solid;
-}
-
-.left {
-  left: -$border-offset;
-  border-left-width: $border-width;
-  border-left-style: solid;
-}
-
-.right {
-  right: -$border-offset;
-  border-right-width: $border-width;
-  border-right-style: solid;
-}
-
-@media (max-width: 425px) {
+@media (max-width: $mqb--max-width-mobile) {
   .score-display {
     padding: 18px 16px;
   }
