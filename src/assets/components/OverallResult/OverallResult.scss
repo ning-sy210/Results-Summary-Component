@@ -56,17 +56,19 @@
 }
 
 @media (max-width: 520px) {
-  .overall-result {
-    border-radius: 0px 0px 32px 32px;
-    row-gap: 24px;
-    padding-top: 24px;
-  }
-
   .result-display {
     $mobile-length: 140px;
 
     width: $mobile-length;
     height: $mobile-length;
+  }
+}
+
+@media (max-width: 425px) {
+  .overall-result {
+    border-radius: 0px 0px 32px 32px;
+    row-gap: 24px;
+    padding-top: 24px;
   }
 
   .performance-text {
