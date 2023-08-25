@@ -15,9 +15,43 @@ p {
   font-family: "HankenGrotesk";
 }
 
+.text__white {
+  color: hsl(0, 0%, 100%);
+}
+
 /* Fonts */
 
 @font-face {
   font-family: "HankenGrotesk";
   src: url("../fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+/* App */
+
+.summary-ctn {
+  background-color: rgb(255, 255, 255);
+  border-radius: 32px;
+  box-shadow: 10px 16px 20px 0px hsl(221, 100%, 96%),
+    0px 0px 12px 0px hsl(0 0% 97%);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 520px) {
+  .summary-ctn {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .summary-ctn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100dvh;
+    box-shadow: none;
+    border-radius: 0px;
+  }
 }

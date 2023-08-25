@@ -1,5 +1,4 @@
 import "./assets/styles/main.scss";
-import "./App.scss";
 import scores from "./assets/data.js";
 
 import { ScoreDisplayProps } from "./assets/components/ScoreBreakdown/ScoreDisplay/ScoreDisplay.js";
