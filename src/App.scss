@@ -14,43 +14,7 @@ $bg-gradient-color-1: hsl(252, 100%, 67%);
 $bg-gradient-color-2: hsl(241, 81%, 54%);
 $bg-gradient: linear-gradient($bg-gradient-color-1 -40%, $bg-gradient-color-2);
 
-.result-summary {
-  padding: 32px 32px 40px;
-  row-gap: 32px;
-
-  .summary-label {
-    font-size: 18px;
-    font-weight: 800;
-    color: hsl(0deg 0% 0% / 75%);
-  }
-
-  .all-scores-ctn {
-    row-gap: 24px;
-  }
-
-  .score-summary-ctn {
-    row-gap: 12px;
-  }
-
-  button {
-    $height: 48px;
-
-    height: $height;
-    border-radius: calc($height / 2);
-    border: none;
-    cursor: pointer;
-
-    background-color: hsl(224, 30%, 27%);
-    color: white;
-    font-family: inherit;
-
-    &:hover {
-      background: $bg-gradient;
-    }
-  }
-}
-
-.score-card {
+.score-display {
   padding: 12px 12px;
   border-radius: 8px;
   position: relative;
@@ -185,12 +149,7 @@ $bg-gradient: linear-gradient($bg-gradient-color-1 -40%, $bg-gradient-color-2);
     border-radius: 0px;
   }
 
-  .result-summary {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  .score-card {
+  .score-display {
     padding: 18px 16px;
   }
 }

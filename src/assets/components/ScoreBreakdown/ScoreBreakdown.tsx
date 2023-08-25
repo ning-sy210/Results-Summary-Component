@@ -1,5 +1,5 @@
 import "./ScoreBreakdown.scss";
-import ScoreDisplay, { ScoreDisplayProps } from "../../../ScoreDisplay";
+import ScoreDisplay, { ScoreDisplayProps } from "./ScoreDisplay/ScoreDisplay";
 
 type scoreBreakdownProps = {
   scores: ScoreDisplayProps[];
@@ -7,10 +7,10 @@ type scoreBreakdownProps = {
 
 const ScoreBreakdown = ({ scores }: scoreBreakdownProps) => {
   return (
-    <div className="result-summary stack">
-      <div className="all-scores-ctn stack">
+    <div className="score-breakdown stack">
+      <div className="score-breakdown--main stack">
         <span className="summary-label">Summary</span>
-        <div className="score-summary-ctn stack">
+        <div className="score-breakdown--core stack">
           {scores.map((score) => (
             <ScoreDisplay
               key={score.category.toLowerCase()}
