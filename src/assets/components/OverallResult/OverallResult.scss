@@ -1,12 +1,7 @@
-.overall-result {
-  $bg-gradient-color-1: hsl(252, 100%, 67%);
-  $bg-gradient-color-2: hsl(241, 81%, 54%);
-  $bg-gradient: linear-gradient(
-    $bg-gradient-color-1 -40%,
-    $bg-gradient-color-2
-  );
+@use "../../styles/base" as *;
 
-  background: $bg-gradient;
+.overall-result {
+  background: $bg-gradient--main;
   border-radius: inherit;
   padding: 32px 40px 40px;
   text-align: center;
@@ -20,13 +15,11 @@
 
 .result-display {
   $length: 160px;
-  $gradient-top-color: hsla(256, 72%, 46%, 1);
-  $gradient-bot-color: hsla(241, 72%, 46%, 0);
 
   width: $length;
   height: $length;
   border-radius: 50%;
-  background: linear-gradient($gradient-top-color, $gradient-bot-color);
+  background: $bg-gradient--circle;
 
   .score {
     font-size: 56px;
@@ -34,7 +27,8 @@
   }
 
   .max-score {
-    color: hsla(0, 0%, 100%, 0.4);
+    color: $color--neutral-1;
+    opacity: 0.45;
   }
 }
 
@@ -48,14 +42,16 @@
   }
 
   p {
-    color: hsla(0, 0%, 100%, 0.65);
+    color: $color--neutral-1;
+    opacity: 0.65;
+
     max-width: 224px;
     font-size: 1rem;
     font-weight: 400;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: $mqb--max-width-small-tablet) {
   .result-display {
     $mobile-length: 140px;
 
@@ -64,7 +60,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: $mqb--max-width-mobile) {
   .overall-result {
     border-radius: 0px 0px 32px 32px;
     row-gap: 24px;
