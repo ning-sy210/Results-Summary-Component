@@ -7,7 +7,7 @@ type OverallResultProps = {
 const OverallResult = ({ result }: OverallResultProps) => {
   return (
     <div className="overall-result stack-hc">
-      <p className="result-text">Your Result</p>
+      <span className="result-text">Your Result</span>
 
       <div className="result-circle-display stack-hvc">
         <span className="score text--white">{result}</span>
