@@ -13,7 +13,7 @@ const ScoreDisplay = ({ categoryLabel, score, icon }: ScoreDisplayProps) => {
     <div className={`vcsb score-display score-display-${catLowerCase}`}>
       <div className="vc score-display__label">
         <img src={icon} title={`${categoryLabel} Icon`} />
-        <span>{categoryLabel}</span>
+        <label>{categoryLabel}</label>
       </div>
 
       <div className="vcsb category-score-ctn">

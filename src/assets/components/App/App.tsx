@@ -8,10 +8,10 @@ import ScoreBreakdown from "../ScoreBreakdown/ScoreBreakdown.js";
 const App = () => {
   return (
     <div className="app stack-hvc">
-      <div className="summary-ctn">
+      <main className="summary-ctn">
         <OverallResult result={calcAverageScoreOfCards(scores)} />
         <ScoreBreakdown scores={scores} />
-      </div>
+      </main>
     </div>
   );
 };
