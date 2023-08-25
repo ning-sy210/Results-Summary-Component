@@ -13,8 +13,8 @@ const ScoreBreakdown = ({ scores }: scoreBreakdownProps) => {
         <div className="score-breakdown--core stack">
           {scores.map((score) => (
             <ScoreDisplay
-              key={score.category.toLowerCase()}
-              category={score.category}
+              key={score.categoryLabel.toLowerCase()}
+              categoryLabel={score.categoryLabel}
               score={score.score}
               icon={score.icon}
             />

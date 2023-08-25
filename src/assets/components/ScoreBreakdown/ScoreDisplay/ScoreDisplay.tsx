@@ -1,17 +1,19 @@
+import "./ScoreDisplay.scss";
+
 export type ScoreDisplayProps = {
-  category: string;
+  categoryLabel: string;
   score: number;
   icon: string;
 };
 
-const ScoreDisplay = ({ category, score, icon }: ScoreDisplayProps) => {
-  const catLowerCase = category.toLowerCase();
+const ScoreDisplay = ({ categoryLabel, score, icon }: ScoreDisplayProps) => {
+  const catLowerCase = categoryLabel.toLowerCase();
 
   return (
-    <div className={`vcsb score-card score-card-${catLowerCase}`}>
-      <div className="vc score-card--label">
-        <img src={icon} title={`${category} Icon`} />
-        <span>{category}</span>
+    <div className={`vcsb score-display score-display-${catLowerCase}`}>
+      <div className="vc score-display--label">
+        <img src={icon} title={`${categoryLabel} Icon`} />
+        <span>{categoryLabel}</span>
       </div>
 
       <div className="vcsb cat-score-ctn">

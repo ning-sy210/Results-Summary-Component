@@ -2,7 +2,7 @@ import "./assets/styles/main.scss";
 import "./App.scss";
 import scores from "./assets/data.js";
 
-import ScoreDisplay, { ScoreDisplayProps } from "./ScoreDisplay.js";
+import { ScoreDisplayProps } from "./assets/components/ScoreBreakdown/ScoreDisplay/ScoreDisplay.js";
 import OverallResult from "./assets/components/OverallResult/OverallResult.js";
 import ScoreBreakdown from "./assets/components/ScoreBreakdown/ScoreBreakdown.js";
 
