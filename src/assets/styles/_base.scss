@@ -1,3 +1,5 @@
+@use "./abstract" as *;
+
 /* Reset + Defaults */
 
 * {
@@ -8,11 +10,6 @@
 
 p {
   font-size: 18px;
-}
-
-.app {
-  min-height: 100dvh;
-  font-family: "HankenGrotesk";
 }
 
 .text--white {
