@@ -1,0 +1,26 @@
+/* Variables */
+
+// media query breakpoints
+$mqb--max-width-desktop: 1440px;
+$mqb--max-width-small-tablet: 520px;
+$mqb--max-width-mobile: 425px;
+
+$bg-gradient--main: linear-gradient(
+  hsl(252, 100%, 67%) -40%,
+  hsl(241, 81%, 54%)
+);
+$bg-gradient--circle: linear-gradient(
+  hsla(256, 72%, 46%, 1),
+  hsla(241, 72%, 46%, 0)
+);
+
+$color--reaction-primary: hsl(0, 100%, 67%);
+$color--memory-primary: hsl(39, 100%, 56%);
+$color--verbal-primary: hsl(166, 100%, 37%);
+$color--visual-primary: hsl(234, 85%, 45%);
+
+$color--white: hsl(0, 0%, 100%);
+$color--black: hsl(0, 0%, 0%);
+$color--pale-blue: hsl(221, 100%, 96%);
+$color--light-lavender: hsl(241, 100%, 89%);
+$color--dark-gray-blue: hsl(224, 30%, 27%);

@@ -2,28 +2,29 @@ import IconReaction from "./images/icon-reaction.svg";
 import IconMemory from "./images/icon-memory.svg";
 import IconVerbal from "./images/icon-verbal.svg";
 import IconVisual from "./images/icon-visual.svg";
+import { ScoreDisplayProps } from "./components/ScoreBreakdown/ScoreDisplay/ScoreDisplay";
 
-const ScoreCards = [
+const ScoreDisplays: ScoreDisplayProps[] = [
   {
-    category: "Reaction",
+    categoryLabel: "Reaction",
     score: 80,
     icon: IconReaction,
   },
   {
-    category: "Memory",
+    categoryLabel: "Memory",
     score: 92,
     icon: IconMemory,
   },
   {
-    category: "Verbal",
+    categoryLabel: "Verbal",
     score: 61,
     icon: IconVerbal,
   },
   {
-    category: "Visual",
+    categoryLabel: "Visual",
     score: 72,
     icon: IconVisual,
   },
 ];
 
-export default ScoreCards;
+export default ScoreDisplays;

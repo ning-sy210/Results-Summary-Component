@@ -1,0 +1,89 @@
+@use "../../../styles/abstract" as *;
+@use "sass:list";
+
+.score-display {
+  padding: 12px 12px;
+  border-radius: 8px;
+  position: relative;
+
+  &__label {
+    column-gap: 10px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  $variation-colors: (
+    "reaction": $color--reaction-primary,
+    "memory": $color--memory-primary,
+    "verbal": $color--verbal-primary,
+    "visual": $color--visual-primary,
+  );
+
+  @each $var, $color in $variation-colors {
+    &-#{$var} {
+      background-color: rgba($color, 0.05);
+      color: rgba($color, 0.8);
+
+      .corner {
+        border-color: rgba($color, 0.1);
+      }
+    }
+  }
+}
+
+.category-score-ctn {
+  font-weight: 800;
+  column-gap: 8px;
+
+  .category-score {
+    color: rgba($color--black, 0.75);
+  }
+
+  .category-max-score {
+    color: rgba($color--black, 0.4);
+  }
+}
+
+$border-length: 10px;
+$border-width: 2px;
+$border-offset: 1px;
+$border-radius: 8px;
+
+$x-axis-pos: "left", "right";
+$y-axis-pos: "top", "bottom";
+
+.corner {
+  position: absolute;
+  width: $border-length;
+  height: $border-length;
+
+  @each $y in $y-axis-pos {
+    @each $x in $x-axis-pos {
+      &--#{$y}-#{$x} {
+        border-#{$y}-#{$x}-radius: $border-radius;
+      }
+    }
+  }
+}
+
+@each $pos in list.join($x-axis-pos, $y-axis-pos) {
+  .#{$pos} {
+    #{$pos}: -$border-offset;
+    border-#{$pos}-width: $border-width;
+    border-#{$pos}-style: solid;
+  }
+}
+
+@media (max-width: $mqb--max-width-mobile) {
+  .score-display {
+    padding: 18px 16px;
+  }
+
+  .corner {
+    $border-length--mobile: 12px;
+    width: $border-length--mobile;
+    height: $border-length--mobile;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../../styles/abstract" as *;
+
+.app {
+  min-height: 100dvh;
+  font-family: "HankenGrotesk";
+}
+
+.summary-ctn {
+  background-color: $color--white;
+  border-radius: 32px;
+  box-shadow: 10px 16px 20px 0px $color--pale-blue,
+    0px 4px 16px 0px rgba($color--pale-blue, 97%);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: $mqb--max-width-small-tablet) {
+  .summary-ctn {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $mqb--max-width-mobile) {
+  .summary-ctn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100dvh;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+}
