@@ -1,3 +1,5 @@
+@use "../../styles/base" as *;
+
 .score-breakdown {
   padding: 32px 32px 40px;
   row-gap: 32px;
@@ -14,7 +16,7 @@
 .summary-label {
   font-size: 18px;
   font-weight: 800;
-  color: hsl(0deg 0% 0% / 75%);
+  color: $color--black;
 }
 
 button {
@@ -26,22 +28,15 @@ button {
   font-family: inherit;
   cursor: pointer;
 
-  color: white;
-  background-color: hsl(224, 30%, 27%);
+  color: $color--white;
+  background-color: $color--dark-gray-blue;
 
   &:hover {
-    $bg-gradient-color-1: hsl(252, 100%, 67%);
-    $bg-gradient-color-2: hsl(241, 81%, 54%);
-    $bg-gradient: linear-gradient(
-      $bg-gradient-color-1 -40%,
-      $bg-gradient-color-2
-    );
-
-    background: $bg-gradient;
+    background: $bg-gradient--main;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: $mqb--max-width-small-tablet) {
   .score-breakdown {
     row-gap: 24px;
 
@@ -60,7 +55,7 @@ button {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: $mqb--max-width-mobile) {
   .score-breakdown {
     padding-top: 24px;
     padding-bottom: 24px;
