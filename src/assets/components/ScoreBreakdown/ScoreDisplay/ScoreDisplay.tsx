@@ -16,9 +16,9 @@ const ScoreDisplay = ({ categoryLabel, score, icon }: ScoreDisplayProps) => {
         <span>{categoryLabel}</span>
       </div>
 
-      <div className="vcsb cat-score-ctn">
-        <span className="cat-score">{score}</span>
-        <span className="cat-max-score">/ 100</span>
+      <div className="vcsb category-score-ctn">
+        <span className="category-score">{score}</span>
+        <span className="category-max-score">/ 100</span>
       </div>
 
       <div className={`top left corner corner__top-left`}></div>

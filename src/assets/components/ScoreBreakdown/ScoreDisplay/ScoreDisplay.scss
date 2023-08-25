@@ -46,70 +46,70 @@
       border-color: hsla(234, 85%, 45%, 0.1);
     }
   }
+}
 
-  .cat-score-ctn {
-    font-weight: 800;
-    column-gap: 8px;
+.category-score-ctn {
+  font-weight: 800;
+  column-gap: 8px;
 
-    .cat-score {
-      color: black;
-    }
-
-    .cat-max-score {
-      color: hsl(0deg 0% 0% / 40%);
-    }
+  .category-score {
+    color: black;
   }
 
-  $border-length: 10px;
-  $border-width: 2px;
-  $border-offset: 1px;
-  $border-radius: 8px;
+  .category-max-score {
+    color: hsl(0deg 0% 0% / 40%);
+  }
+}
 
-  .corner {
-    position: absolute;
-    width: $border-length;
-    height: $border-length;
+$border-length: 10px;
+$border-width: 2px;
+$border-offset: 1px;
+$border-radius: 8px;
 
-    &__top-left {
-      border-top-left-radius: $border-radius;
-    }
+.corner {
+  position: absolute;
+  width: $border-length;
+  height: $border-length;
 
-    &__top-right {
-      border-top-right-radius: $border-radius;
-    }
-
-    &__bot-left {
-      border-bottom-left-radius: $border-radius;
-    }
-
-    &__bot-right {
-      border-bottom-right-radius: $border-radius;
-    }
+  &__top-left {
+    border-top-left-radius: $border-radius;
   }
 
-  .top {
-    top: -$border-offset;
-    border-top-width: $border-width;
-    border-top-style: solid;
+  &__top-right {
+    border-top-right-radius: $border-radius;
   }
 
-  .bot {
-    bottom: -$border-offset;
-    border-bottom-width: $border-width;
-    border-bottom-style: solid;
+  &__bot-left {
+    border-bottom-left-radius: $border-radius;
   }
 
-  .left {
-    left: -$border-offset;
-    border-left-width: $border-width;
-    border-left-style: solid;
+  &__bot-right {
+    border-bottom-right-radius: $border-radius;
   }
+}
 
-  .right {
-    right: -$border-offset;
-    border-right-width: $border-width;
-    border-right-style: solid;
-  }
+.top {
+  top: -$border-offset;
+  border-top-width: $border-width;
+  border-top-style: solid;
+}
+
+.bot {
+  bottom: -$border-offset;
+  border-bottom-width: $border-width;
+  border-bottom-style: solid;
+}
+
+.left {
+  left: -$border-offset;
+  border-left-width: $border-width;
+  border-left-style: solid;
+}
+
+.right {
+  right: -$border-offset;
+  border-right-width: $border-width;
+  border-right-style: solid;
 }
 
 @media (max-width: 425px) {
