@@ -1,3 +1,28 @@
+/* Variables */
+
+$width-bp__desktop: 1440px;
+$width-bp__small-tablet: 520px;
+$width-bp__mobile: 375px;
+
+$bg-gradient__main: linear-gradient(
+  hsl(252, 100%, 67%) -40%,
+  hsl(241, 81%, 54%)
+);
+$bg-gradient__circle: linear-gradient(
+  hsla(256, 72%, 46%, 1),
+  hsla(241, 72%, 46%, 0)
+);
+
+$primary-color__reaction: hsl(0, 100%, 67%);
+$primary-color__memory: hsl(39, 100%, 56%);
+$primary-color__verbal: hsl(166, 100%, 37%);
+$primary-color__visual: hsl(234, 85%, 45%);
+
+$palette-color-1: hsl(0, 0%, 100%);
+$palette-color-2: hsl(221, 100%, 96%);
+$palette-color-3: hsl(241, 100%, 89%);
+$palette-color-4: hsl(224, 30%, 27%);
+
 /* Reset + Defaults */
 
 * {
