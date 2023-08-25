@@ -52,6 +52,10 @@
 }
 
 @media (max-width: $mqb--max-width-small-tablet) {
+  .overall-result {
+    row-gap: 16px;
+  }
+
   .result-circle-display {
     $mobile-length: 140px;
 
