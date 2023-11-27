@@ -1,5 +1,4 @@
 @use "../../../styles/abstract" as *;
-@use "sass:list";
 
 .score-display {
   padding: 12px 12px;
@@ -59,20 +58,22 @@ $y-axis-pos: "top", "bottom";
   width: $border-length;
   height: $border-length;
 
+  // each corner is made with a position: absolute square, and the corner edges are made by adding styles to the
+  // relevant edges of that square, for example:
+  //   - for bottom-right corner, add border-bottom-right-radius and border-style: solid to bottom and right edges of bottom-right square
+  //   - for top-left corner, add border-top-left-radius and border-style: solid to top and left edges of top-left square, and etc
   @each $y in $y-axis-pos {
     @each $x in $x-axis-pos {
-      &--#{$y}-#{$x} {
+      &.#{$y}-#{$x} {
         border-#{$y}-#{$x}-radius: $border-radius;
+
+        @each $pos in $x, $y {
+          #{$pos}: -$border-offset;
+          border-#{$pos}-width: $border-width;
+          border-#{$pos}-style: solid;
+        }
       }
     }
-  }
-}
-
-@each $pos in list.join($x-axis-pos, $y-axis-pos) {
-  .#{$pos} {
-    #{$pos}: -$border-offset;
-    border-#{$pos}-width: $border-width;
-    border-#{$pos}-style: solid;
   }
 }
 
