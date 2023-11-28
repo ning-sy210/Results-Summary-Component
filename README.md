@@ -131,12 +131,21 @@ $y-axis-pos: "top", "bottom";
   width: $border-length;
   height: $border-length;
 
-  // each corner is made with a position: absolute square, and the corner edges are made by adding
-  // styles to the relevant edges of that square, for example:
-  //   - for bottom-right corner, add border-bottom-right-radius, border-style: solid and border-width
-  //     to bottom and right edges of bottom-right square
-  //   - for top-left corner, add border-top-left-radius, border-style: solid and border-width to top
-  //     and left edges of top-left square, and etc
+  // each corner is made with a `position: absolute` square, and the corner edges are 
+  // made by adding styles to the relevant edges of that square, for example:
+  //   - bottom-right corner:
+  //       1. add negative offset to `bottom` and `right` CSS properties
+  //       2. add `border-style: solid` and `border-width` to the bottom and right edges
+  //          of bottom-right square
+  //       3. add `border-bottom-right-radius`
+  //
+  //   - top-left corner:
+  //       1. add negative offset to `top` and `left` CSS properties
+  //       2. add `border-style: solid` and `border-width` to the top and left edges
+  //          of top-left square
+  //       3. add `border-top-left-radius`
+  //
+  //   - and similarly for the other two corners
   @each $y in $y-axis-pos {
     @each $x in $x-axis-pos {
       &.#{$y}-#{$x} {
@@ -152,6 +161,8 @@ $y-axis-pos: "top", "bottom";
   }
 }
 ```
+
+Something that I thought might not be clear is, the reason why I decided to add four `position: absolute` squares to the four corners instead of just one rectangle, is because the required style of having only the corners have border widths but not the middle segments between those corners is not achievable through the latter approach. 
 
 ### Useful resources
 
